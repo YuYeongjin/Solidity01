@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
-
+  /**
+   * @title ContractName
+   * @dev ContractDescription
+   * @custom:dev-run-script file_path
+   */
 contract Ex2_2 {
 
     int a;
