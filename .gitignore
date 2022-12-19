@@ -1,0 +1,4 @@
+# 프로젝트 제외 경로
+/solidity01/.gradle/
+/solidity01/build/
+/solidity01/build/classes/java/main/
