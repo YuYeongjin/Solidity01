@@ -1,0 +1,36 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="solidity1" type="SolidityConfigurationType" factoryName="Solidity" show_console_on_std_err="false" show_console_on_std_out="false">
+    <option name="VMParameters" value="" />
+    <option name="allowRunningInParallel" value="false" />
+    <option name="alternativeJrePath" value="11" />
+    <option name="alternativeJrePathEnabled" value="true" />
+    <option name="classpathModifications">
+      <list />
+    </option>
+    <option name="envs">
+      <map />
+    </option>
+    <option name="passParentEnvs" value="true" />
+    <option name="programParameters" value="" />
+    <option name="projectPathOnTarget" />
+    <option name="selectedOptions">
+      <list />
+    </option>
+    <option name="workingDirectory" value="" />
+    <option name="contractName" value="Ex2_1" />
+    <option name="contractFile" value="$PROJECT_DIR$/src/main/java/org/example/sol/Ex2_1.sol" />
+    <option name="functionName" value="" />
+    <option name="vmParameters" value="" />
+    <option name="programParameters" value="" />
+    <option name="workingDirectory" value="" />
+    <option name="envs">
+      <map />
+    </option>
+    <option name="ajreEnabled" value="true" />
+    <option name="ajre" value="11" />
+    <module name="" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
