@@ -5,7 +5,13 @@ contract Ex3_1 {
     function myFun() public {
         a=5;
     }
-    function myFun(uint b) public{
+    function myFun1(uint b) public{
         a=b;
     }
+    function myFun2(uint c, uint d, uint e) public{
+        a=c;
+        a=d;
+        a=e;
+    }
+
 }
