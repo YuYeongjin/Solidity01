@@ -38,7 +38,14 @@ contract quiz1{
         return 0;
 
     }
+    function whileFun(uint num) public {
+        for (uint i = 0 ; i < 10; i++){
+            if( i < 3){
 
-
-
+            }
+            if(i==7){
+                break;
+            }
+        }
+    }
 }
