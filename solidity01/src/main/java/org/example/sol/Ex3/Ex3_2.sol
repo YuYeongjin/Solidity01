@@ -26,6 +26,19 @@ contract quiz1{
     function doubledNum(uint num) public pure returns(uint){
         return num*2;
 
-    } 
+    }
+
+    function ifFun(uint number) public pure returns(uint){
+
+
+        if(number > 5){
+            return 5;
+        }
+
+        return 0;
+
+    }
+
+
 
 }
