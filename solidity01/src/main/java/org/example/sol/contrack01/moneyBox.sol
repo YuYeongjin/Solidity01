@@ -4,7 +4,7 @@ pragma solidity >=0.7.0 < 0.9.0;
  1. 1 이더만 내야함
  2. 중복해서 참여 불가 (적립금을 받으면 초기화)
  3. 관리자만 적립된 이더 볼 수 있음
- 4. n 배수 번째 사람에게만 적립된 이더를 지급함.
+ 4. 3 배수 번째 사람에게만 적립된 이더를 지급함.
 */
 
 contract moneyBox {
@@ -19,8 +19,13 @@ contract moneyBox {
         owner = msg.sender;
     }
     receive() external payable{
-       require(msg.value == 1 ether, "Must be 1 ether.");
+        require(msg.value == 1 ether, "Must be 1 ether.");
+        require(paidMemberList[round][msg.sender] == false, "Must be a new player in each game.");
+        paidMemberList[round][msg.sender]=true;
+        emit whoPaid(msg.sender, msg.value);
+        if(address (this).balance == 3ether){
 
+        }
     }
 
 }
