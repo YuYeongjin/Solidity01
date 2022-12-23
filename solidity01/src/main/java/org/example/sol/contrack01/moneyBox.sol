@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 < 0.9.0;
 
 /*
@@ -36,7 +37,7 @@ contract moneyBox {
         return round;
     }
     function checkValue() public view returns(uint256){
-        require(owner==msg.sender,"Only Onwer can check the value");
+        require(owner==msg.sender,"Only Owner can check the value");
         return address(this).balance;
     }
 
