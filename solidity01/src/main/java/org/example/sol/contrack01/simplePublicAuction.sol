@@ -27,14 +27,14 @@ contract simplePublicAuction {
         address _beneficiary
     ) public {
         beneficiary=_beneficiary;
-        actionEnd = now + _biddingTime;
+        actionEnd = block.timestamp+_biddingTime;
     }
     // 경매에 대한 가격 제시와 값은 이 트랜젝션으로 보내짐, 값은 이기지 못한 경우 반환
     function bid() public payable{
         // payable은 이더를 지급하는 것이 가능하도록 하기위함.
 
         // 경매 종료시 반환
-        require(now <= actionEnd);
+        require(block.timestamp <= actionEnd);
 
         // 만약 제시한 값이 높지않다면 돈을 돌려줌
         require(msg.value >highestBid);
@@ -55,7 +55,7 @@ contract simplePublicAuction {
         if(amount>0){
             // 이 함수는 send 이전에 호출의 일부로서 재사용성이 있기에 0으로 만듦
             pendingReturns[msg.sender] =0;
-            if (!msg.sender.send(amount)){
+            if (!payable(msg.sender).send(amount)){
                 pendingReturns[msg.sender]=amount;
                 return false;
             }
@@ -71,7 +71,7 @@ contract simplePublicAuction {
         // 3. 상호 작용
 
         // 1. 조건
-        require(now >= actionEnd);
+        require(block.timestamp >= actionEnd);
         require(!ended);
 
         // 2. 동작 수행
@@ -79,7 +79,7 @@ contract simplePublicAuction {
         emit AuctionEnded(highestBidder,highestBid);
 
         // 3. 상호 작용
-        beneficiary.transfer(highestBid);
+        payable(beneficiary).transfer(highestBid);
     }
 
 
