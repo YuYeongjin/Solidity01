@@ -20,7 +20,7 @@ contract moneyBox {
     uint256 round = 1;
 
     constructor(){
-        owner = msg.sender;
+        owners = msg.sender;
     }
     receive() external payable{
         require(msg.value == 1 ether, "Must be 1 ether.");
@@ -37,7 +37,7 @@ contract moneyBox {
         return round;
     }
     function checkValue() public view returns(uint256){
-        require(owner==msg.sender,"Only Owner can check the value");
+        require(owners==msg.sender,"Only Owner can check the value");
         return address(this).balance;
     }
 

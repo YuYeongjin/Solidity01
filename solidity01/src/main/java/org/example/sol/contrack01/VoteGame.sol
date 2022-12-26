@@ -1,4 +1,5 @@
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 < 0.9.0;
 
 
 // 위임투표
@@ -25,7 +26,7 @@ contract VoteGame{
     Proposal[] public proposals;
 
     // 새로운 투표권 생성
-    function VoteGame(bytes32[] proposalNames) public {
+    function Vote(bytes32[] memory proposalNames) public {
         chairperson = msg.sender;
         voters[chairperson].weight=1;
 

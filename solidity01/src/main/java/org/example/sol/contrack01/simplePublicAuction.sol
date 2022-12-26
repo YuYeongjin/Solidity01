@@ -1,4 +1,5 @@
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 < 0.9.0;
 
 contract simplePublicAuction {
     // 변수선언
@@ -44,7 +45,7 @@ contract simplePublicAuction {
             pendingReturns[highestBidder] +=highestBid;
         }
         highestBidder = msg.sender;
-        highestBidder = msg.value;
+        highestBid = msg.value;
         emit HighestBidIncreased(msg.sender, msg.value);
     }
 
