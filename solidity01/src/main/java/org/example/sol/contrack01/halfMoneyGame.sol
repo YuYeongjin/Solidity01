@@ -18,22 +18,21 @@ contract moneygame {
     }
     function haveMoney(uint money) public returns(uint){
         if(playerCoin[msg.sender] !=0){
-            return currentMoney();
+            currentMoney();
         } else {
-            return createMoney(money);
+            createMoney(money);
         }
+        return getMapping();
     }
-    function createMoney(uint money) internal returns(uint){
+    function createMoney(uint money) internal{
         coin = money;
         playerCoin[msg.sender] = coin*1/2;
-        return getMapping();
     }
-    function currentMoney() internal returns(uint){
+    function currentMoney() internal{
         playerCoin[msg.sender] = playerCoin[msg.sender]*1/2;
-        return getMapping();
     }
 
-    function getMapping() internal view returns(uint){
+    function getMapping() public view returns(uint){
         return playerCoin[msg.sender];
     }
 }
