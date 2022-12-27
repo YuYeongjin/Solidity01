@@ -10,9 +10,7 @@ pragma solidity >= 0.7.0 < 0.9.0;
 contract moneygame {
     address player;
     uint coin;
-
     mapping (address => uint) playerCoin;
-
     constructor(){
         player = msg.sender;
     }
@@ -31,7 +29,6 @@ contract moneygame {
     function currentMoney() internal{
         playerCoin[msg.sender] = playerCoin[msg.sender]*1/2;
     }
-
     function getMapping() public view returns(uint){
         return playerCoin[msg.sender];
     }
