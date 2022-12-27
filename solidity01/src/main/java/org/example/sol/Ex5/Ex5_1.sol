@@ -17,4 +17,12 @@ contract Ex5_1{
         balances[_key] =0;
     }
 
+    string[5] public array = ["apple","banana","coconut"];
+    function addarray1(uint _val,string memory _value) public {
+        array[_val] = _value;
+        array[_val] = _value;
+    }
+
+
+
 }
