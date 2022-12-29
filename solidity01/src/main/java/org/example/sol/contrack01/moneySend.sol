@@ -20,4 +20,6 @@ contract moneySend {
         require(sent,"Failed to send either");
         emit howMuch(msg.value);
     }
+
+
 }
