@@ -26,7 +26,7 @@ contract randomGame {
     }
 
     receive() external payable{
-        require(msg.value == 10**16, "Must be 0.01 ether.");
+        require(msg.value == 10**15, "Must be 0.001 ether.");
             require(paidAddressList[round][msg.sender]==false,"Must be the first time.");
         paidAddressList[round][msg.sender]=true;
         ++playNumber;
