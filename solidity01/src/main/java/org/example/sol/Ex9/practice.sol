@@ -2,7 +2,7 @@
 pragma solidity >=0.7.0 < 0.9.0;
 
 contract pr1 {
-    
+    // plugin Truffle && Ganache ...!
     address myAcount;
     constructor() payable {}
     function money(address _address) public payable returns(bool){
