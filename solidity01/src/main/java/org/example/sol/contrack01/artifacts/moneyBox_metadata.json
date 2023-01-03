@@ -1,0 +1,100 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "payment",
+						"type": "uint256"
+					}
+				],
+				"name": "whoPaid",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "checkRound",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"solidity01/src/main/java/org/example/sol/contrack01/moneyBox.sol": "moneyBox"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"solidity01/src/main/java/org/example/sol/contrack01/moneyBox.sol": {
+			"keccak256": "0xdbfcca9fa664c8336cca56dfa7c9d264900595811222f7bc866c52486331734f",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://ebdeb84e95b103085b6e1c406725428119fb0599947d60478a3cd5a46c6a2733",
+				"dweb:/ipfs/QmTyATzJVeBDhfgaBFXmw271b3fHURLrohxgn4bCPHAHva"
+			]
+		}
+	},
+	"version": 1
+}
