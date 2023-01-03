@@ -3,6 +3,12 @@ pragma solidity >= 0.7.0 < 0.9.0;
 
 contract randomGame {
     address public owner;
+    mapping (uint => mapping(address => bool)) public paidAddressList;
+    uint private winnerNumber =0;
+    string private key1;
+    uint private key2;
+    uint public round =1;
+    uint public playNumber =0;
 
     event PaidAddress(address indexed sender, uint256 payment);
     event WinnerAddress(address indexed winner);
@@ -11,13 +17,6 @@ contract randomGame {
         require(msg.sender==owner, "caller is not the owner");
         _;
     }
-    mapping (uint => mapping(address => bool)) public paidAddressList;
-    uint private winnerNumber =0;
-    string private key1;
-    uint private key2;
-
-    uint public round =1;
-    uint public playNumber =0;
 
     constructor(string memory _key1, uint _key2) {
         owner = msg.sender;
@@ -68,5 +67,4 @@ contract randomGame {
     function getbalance() public view returns(uint256) {
         return address(this).balance;
     }
-
 }
