@@ -6,7 +6,7 @@ contract pickGame {
     uint256 inputEth=msg.value;
     uint256[5][5] pickGameBoard;
     bool[5][5] pickGameBoardCheck;
-    constructor() public{
+    constructor() {
         owner = msg.sender;
     }
     
@@ -23,11 +23,9 @@ contract pickGame {
                 }
             }
         }
-        require(cnt==24,"Doesn't Clear Board");
+        require(cnt>=24,"Doesn't Clear Board");
         _;
     }
-
-    
 
     function CreateBoard() public onlyOwner() boardClear(){
         
