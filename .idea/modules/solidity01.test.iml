@@ -69,14 +69,7 @@
         <webroots>
           <root url="file://$USER_HOME$/Downloads/apache-tomcat-8.5.84/apache-tomcat-8.5.84/webapps/manager" relative="/" />
         </webroots>
-        <sourceRoots />
       </configuration>
     </facet>
-  </component>
-  <component name="NewModuleRootManager">
-    <content url="file://$USER_HOME$/Downloads/apache-tomcat-8.5.84/apache-tomcat-8.5.84">
-      <sourceFolder url="file://$USER_HOME$/Downloads/apache-tomcat-8.5.84/apache-tomcat-8.5.84/webapps/docs/appdev/sample/src" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/Downloads/apache-tomcat-8.5.84/apache-tomcat-8.5.84/webapps/examples/WEB-INF/classes" isTestSource="false" />
-    </content>
   </component>
 </module>
