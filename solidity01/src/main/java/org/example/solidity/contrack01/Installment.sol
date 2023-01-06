@@ -2,7 +2,7 @@
 pragma solidity >= 0.7.0 < 0.9.0;
 
 contract Installment {
-    // 3회 적금 시 적금 총액을 돌려받기
+    // 3회이상 적금 후 인출시 적금 총액을 돌려받기
     address owner;
     uint[] account;
     uint256 count;
@@ -13,25 +13,27 @@ contract Installment {
     
     modifier onlyOwner(){
         require(msg.sender==owner,"only owner");
-        require(msg.value>=0,"Input Ether");
+        require(msg.value>0,"Input Ether");
         _;
         count++;
     }
 
+    modifier OwnerWithdraw(){
+        require(msg.sender==owner,"only owner");
+        require(count>=3,"More installment require");
+        _;
+        count=0;
+    }
     function howMuch() internal {
         money = msg.value;
     }
-
     function installment() public onlyOwner() payable{
         howMuch();
         account.push(money);
     }
-    function withdraw() public onlyOwner() payable returns(bool){
-        require(count==3,"More installment require");
-        
+    function withdraw() public OwnerWithdraw() payable returns(bool){       
         (bool success,)= payable(msg.sender).call{value:address(this).balance}("");
         require (success,"Send false");
-        count =0;
         return success;
     }
 
