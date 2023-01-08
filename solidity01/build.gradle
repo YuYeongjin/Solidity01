@@ -12,6 +12,8 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // 참고 https://github.com/hyperledger/fabric-samples
+    implementation 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:2.4.1'
 }
 
 test {

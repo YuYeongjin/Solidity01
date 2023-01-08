@@ -1,0 +1,58 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "CreateBoard",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/main/java/org/example/sol/Ex9/pickGame.sol": "pickGame"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"src/main/java/org/example/sol/Ex9/pickGame.sol": {
+			"keccak256": "0x90c56cd450ca1d78fe16a7a11b5a770c5afab82893782d80d6cb4f6b47d5c608",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://aa0d89a52472edab7d2c79528b4e23fb982c092e27801e9a639a7b26b05699d0",
+				"dweb:/ipfs/QmS9n4SoXiS68R8wTkjtcZyW1Mg7MyTuhQgNoPV9ygxvba"
+			]
+		}
+	},
+	"version": 1
+}
